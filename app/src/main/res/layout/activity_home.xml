@@ -5,41 +5,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00D688"
-    tools:context=".MainActivity">
+    tools:context=".HomeActivity">
 
     <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_marginBottom="456dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="156dp"
         android:text="Logout"
-        android:textSize="50dp"
+        android:textSize="30dp"
+        android:onClick="goToLoginScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/android_icon_home"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="@+id/android_icon_home" />
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/android_icon_home"
+        app:layout_constraintTop_toBottomOf="@+id/android_icon_home" />
 
     <TextView
         android:id="@+id/welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="135dp"
-        android:layout_marginTop="200dp"
-        android:padding="10dp"
+        android:layout_width="383dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/rounded_corner2"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="Welcome to the Home Screen"
         android:textColor="@color/white"
-        android:textSize="80dp"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/android_icon_home"
-        android:layout_width="580dp"
-        android:layout_height="455dp"
+        android:layout_width="348dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="150dp"
         android:background="#00d688"
-        app:layout_constraintBottom_toTopOf="@+id/logout"
         app:layout_constraintEnd_toEndOf="@+id/welcome_text"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="@+id/welcome_text"
         app:layout_constraintTop_toBottomOf="@+id/welcome_text"
         app:srcCompat="@drawable/baseline_android_24" />

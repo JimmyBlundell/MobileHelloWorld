@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText username = (EditText) findViewById(R.id.username);
                 EditText password = (EditText) findViewById(R.id.password);
-                if (!username.getText().toString().equals("admin") && !password.getText().toString().equals("password")) {
+                if (!username.getText().toString().equals("admin") || !password.getText().toString().equals("password")) {
                     new AlertDialog.Builder(MainActivity.this)
                             .setTitle("Uh oh!")
                             .setMessage("Invalid username/password")
@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
                             .setIcon(android.R.drawable.ic_dialog_alert)
                             .show();
                 } else {
-                    goToHomeScreen();
+                    goToHomeScreen(v);
                 }
             }
         });
     }
 
-    public void goToHomeScreen() {
+    public void goToHomeScreen(View v) {
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }

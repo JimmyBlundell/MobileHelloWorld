@@ -15,10 +15,15 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         Button button = (Button) findViewById(R.id.logout);
-        button.setOnClickListener(click -> goToMainActivity());
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToLoginScreen(v);
+            }
+        });
     }
 
-    public void goToMainActivity() {
+    public void goToLoginScreen(View v) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
